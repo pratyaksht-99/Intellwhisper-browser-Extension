@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IntellWhisper</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div class="container">
+      <h3>IntellWhisper</h3>
+      <div>
+        <label>Quick Rule</label>
+        <input id="sel" placeholder="CSS selector (e.g. #login)" />
+        <select id="act">
+          <option value="click">Click</option>
+          <option value="fill">Fill</option>
+          <option value="hide">Hide</option>
+        </select>
+        <input id="val" placeholder="Value (for fill)" />
+        <button id="add">Add Rule</button>
+      </div>
+      <div id="rulesList"></div>
+      <div style="margin-top:8px;"><button id="run">Run on current tab</button> <button id="extract">Extract Tables</button></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

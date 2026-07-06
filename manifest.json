@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "IntellWhisper \u2014 Master of Whispers",
+  "description": "Intelligent DOM automation, UI overlays, data extraction and privacy controls.",
+  "version": "1.0.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "IntellWhisper"
+  },
+  "options_page": "options.html",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
